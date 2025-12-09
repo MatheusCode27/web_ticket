@@ -1,0 +1,238 @@
+/* Layout geral */
+.totem-root {
+  position: relative;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: radial-gradient(circle at top, #e0f2fe, #0f172a);
+}
+
+/* leve camada para suavizar o fundo */
+.totem-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.2),
+    rgba(8, 47, 73, 0.5)
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Cabeçalho */
+.totem-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #e5f2ff;
+}
+
+.totem-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.totem-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  font-size: 26px;
+  background: rgba(15, 23, 42, 0.7);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.6);
+}
+
+.totem-brand h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.totem-brand p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Data e hora */
+.totem-datetime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 14px;
+}
+
+.totem-datetime .time {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.totem-datetime .date {
+  opacity: 0.85;
+}
+
+/* Conteúdo principal */
+.totem-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Card da senha atual */
+.totem-ticket-card {
+  background: rgba(248, 250, 252, 0.98);
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.totem-ticket-label {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #64748b;
+}
+
+.totem-ticket-number {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #0f172a;
+}
+
+.totem-ticket-type {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+/* Ações */
+.totem-actions {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 24px;
+  padding: 24px 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.6);
+  color: #e5f2ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.totem-instruction {
+  margin: 0 0 18px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.totem-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Botões */
+.totem-button {
+  border: none;
+  border-radius: 18px;
+  padding: 16px 18px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+    background 0.12s ease-out;
+  font: inherit;
+}
+
+.totem-button .btn-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.totem-button .btn-subtitle {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Estilos específicos */
+.totem-button.normal {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: #e0f2fe;
+  box-shadow: 0 14px 30px rgba(56, 189, 248, 0.45);
+}
+
+.totem-button.priority {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #fff7ed;
+  box-shadow: 0 14px 30px rgba(248, 146, 60, 0.5);
+}
+
+.totem-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.7);
+}
+
+.totem-button:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* Rodapé */
+.totem-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #cbd5f5;
+  opacity: 0.9;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .totem-main {
+    grid-template-columns: 1fr;
+  }
+
+  .totem-root {
+    padding: 16px;
+  }
+
+  .totem-ticket-number {
+    font-size: 60px;
+  }
+
+  .totem-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .totem-datetime {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .totem-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .totem-ticket-card,
+  .totem-actions {
+    padding: 20px;
+  }
+}

@@ -1,31 +1,29 @@
-import { useContext, useState } from "react";
-import { SistemaContext } from "../context/SistemaContext";
+import { useState } from "react";
 
 export default function AtendenteScreen() {
-  const { chamarProxima } = useContext(SistemaContext);
-  const [guiche, setGuiche] = useState(1);
-  const [atual, setAtual] = useState(null);
-
-  function chamar() {
-    const r = chamarProxima(guiche);
-    setAtual(r);
-  }
+  const [guiche, setGuiche] = useState("1");
 
   return (
-    <div style={{ padding: 40 }}>
+    <div className="container">
       <h1>Área do Atendente</h1>
 
-      <label>Guichê: </label>
-      <select value={guiche} onChange={e => setGuiche(e.target.value)}>
+      <label style={{ fontSize: "18px" }}>Selecione o guichê:</label>
+      <br />
+
+      <select
+        className="select"
+        value={guiche}
+        onChange={(e) => setGuiche(e.target.value)}
+      >
         <option value="1">Guichê 1</option>
         <option value="2">Guichê 2</option>
         <option value="3">Guichê 3</option>
       </select>
 
-      <br/><br/>
-      <button onClick={chamar}>Chamar Próxima</button>
+      <br />
+      <br />
 
-      {atual && <h2>Chamado: {atual.senha} → Guichê {atual.guiche}</h2>}
+      <button className="button">Chamar Próxima Senha</button>
     </div>
   );
 }

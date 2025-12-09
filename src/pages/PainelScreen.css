@@ -1,0 +1,168 @@
+/* FUNDO premium estilo Apple */
+.painel-root {
+  min-height: calc(100vh - 56px);
+  padding: 36px 48px;
+  background: radial-gradient(circle at top, #e0f2ff, #bcd7ef, #90a8c8);
+  font-family: system-ui, sans-serif;
+  color: #0f172a;
+}
+
+/* CABEÇALHO */
+.painel-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.painel-header h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.painel-header p {
+  margin-top: 4px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* GRID PRINCIPAL */
+.painel-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+/* CARD PRINCIPAL — SENHA ATUAL */
+.painel-card-main {
+  background: #ffffffee;
+  padding: 48px;
+  border-radius: 32px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.painel-card-main.pulse {
+  transform: scale(1.03);
+  box-shadow: 0 30px 80px rgba(0, 80, 180, 0.35);
+}
+
+.label {
+  font-size: 18px;
+  color: #64748b;
+}
+
+.ticket-code {
+  font-size: 110px;
+  font-weight: 900;
+  margin-top: 8px;
+  color: #0f172a;
+}
+
+.ticket-type {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+/* COLUNA DIREITA */
+.painel-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* LISTA DE ÚLTIMAS */
+.painel-card-list {
+  background: #ffffffdd;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+}
+
+.painel-card-list h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.painel-card-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.painel-card-list li {
+  padding: 10px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #d8dee4;
+}
+
+.painel-card-list li:last-child {
+  border-bottom: none;
+}
+
+.tag {
+  font-size: 14px;
+  margin-left: 8px;
+  padding: 3px 7px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border-radius: 8px;
+}
+
+.empty {
+  opacity: 0.7;
+}
+
+/* BOTÕES */
+.painel-card-buttons {
+  background: #ffffffdd;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.painel-card-buttons h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+}
+
+.btn-normal,
+.btn-pref {
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-normal {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  color: white;
+  box-shadow: 0 15px 40px rgba(0, 150, 255, 0.4);
+}
+
+.btn-pref {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 15px 40px rgba(30, 64, 175, 0.4);
+}
+
+.btn-normal:hover,
+.btn-pref:hover {
+  transform: translateY(-3px);
+}
+
+.fila-info {
+  margin-top: 18px;
+  font-size: 15px;
+  opacity: 0.6;
+}
+.painel-card-buttons .fila-info strong {
+  font-weight: 600;
+  opacity: 0.9;
+}
