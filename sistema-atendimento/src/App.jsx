@@ -1,18 +1,29 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import TotemScreen from "./pages/TotemScreen";
-import PanelScreen from "./pages/PanelScreen";
-import AtendenteScreen from "./pages/AtendenteScreen";
+import PainelScreen from "./pages/PainelScreen";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<TotemScreen />} />
-        <Route path="/painel" element={<PanelScreen />} />
-        <Route path="/atendente" element={<AtendenteScreen />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="app-shell">
+      <header className="topbar">
+        <div className="topbar-left">
+          <span className="logo-dot" />
+          <span className="topbar-title">Sistema de Atendimento</span>
+        </div>
+
+        <nav className="topbar-nav">
+          <Link to="/totem">Totem</Link>
+          <Link to="/painel">Painel</Link>
+        </nav>
+      </header>
+
+      <main className="app-main">
+        <Routes>
+          <Route path="/" element={<TotemScreen />} />
+          <Route path="/totem" element={<TotemScreen />} />
+          <Route path="/painel" element={<PainelScreen />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
-
-export default App;
