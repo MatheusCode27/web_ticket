@@ -1,16 +1,118 @@
-# React + Vite
+📌 Sistema de Controle de Atendimento – Totem + Painel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um sistema profissional de controle de filas com:
 
-Currently, two official plugins are available:
+🏷️ Totem para retirada de senha
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📺 Painel de chamadas em tempo real
 
-## React Compiler
+🎨 Interface premium (estilo Apple / Nubank)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚛️ Desenvolvido em React.js
 
-## Expanding the ESLint configuration
+🎛️ Gerenciamento de estado com Context API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este projeto foi construído para simular um sistema real usado em clínicas, hospitais, repartições públicas e empresas que precisam organizar atendimento.
+
+🎨 Demonstração
+Totem de Atendimento
+![Totem](./screenshots/totem.png.png)
+
+Painel de Chamadas
+![Painel](./screenshots/painel.png.png)
+
+
+
+Painel de Chamadas
+
+🚀 Funcionalidades
+✔️ Totem
+
+Gera senha Normal
+
+Gera senha Preferencial
+
+Interface moderna e responsiva
+
+Animações e botões profissionais
+
+✔️ Painel
+
+Exibe senha atual
+
+Lista das últimas chamadas
+
+Botões de "Chamar normal" e "Chamar preferencial"
+
+Animação quando a senha muda
+
+Interface premium azul claro
+
+✔️ Sistema Interno
+
+Gerenciamento completo de fila
+
+Context API centralizando tudo
+
+Componentes limpos e organizados
+
+Pronto para integração com API/banco de dados
+
+🛠️ Tecnologias Utilizadas
+
+React.js (Vite)
+
+Context API
+
+CSS Moderno
+
+Node.js (pode ser futuro backend)
+
+Git & GitHub
+
+📂 Estrutura do Projeto
+src/
+  pages/
+    TotemScreen.jsx
+    TotemScreen.css
+    PainelScreen.jsx
+    PainelScreen.css
+  context/
+    QueueContext.jsx
+  styles/
+    global.css
+  App.jsx
+  main.jsx
+
+▶️ Como rodar o projeto
+
+1️⃣ Instale as dependências:
+
+npm install
+
+
+2️⃣ Rode o servidor:
+
+npm run dev
+
+
+3️⃣ Acesse no navegador:
+
+http://localhost:5173/
+
+🔧 Próximas melhorias
+
+🔊 Som ao chamar senha
+
+🌐 API com backend (Node + SQLite)
+
+🖥️ Tela de TV dedicada
+
+🏢 Múltiplos guichês
+
+💾 Persistência dos dados
+
+👨‍💻 Autor
+
+Matheus Filipe
+Desenvolvedor Full Stack em formação
